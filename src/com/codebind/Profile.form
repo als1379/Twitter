@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.codebind.Profile">
+  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="575" height="659"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="c4550" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <background color="-3806977"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="dc025" binding="panel2" layout-manager="GridLayoutManager" row-count="3" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-855809"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="9faeb" class="javax.swing.JLabel" binding="image" custom-create="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="2f942" class="javax.swing.JButton" binding="Name" custom-create="true">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-16743746"/>
+                </properties>
+              </component>
+              <component id="2f0e1" class="javax.swing.JButton" binding="backButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16743746"/>
+                  <foreground color="-855809"/>
+                  <text value="Back"/>
+                </properties>
+              </component>
+              <component id="d9b51" class="javax.swing.JButton" binding="logOutButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16743746"/>
+                  <foreground color="-855809"/>
+                  <text value="Log Out"/>
+                </properties>
+              </component>
+              <component id="6619c" class="javax.swing.JButton" binding="button" custom-create="true">
+                <constraints>
+                  <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="41c40" class="javax.swing.JLabel" binding="followersNum" custom-create="true">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="7a785" class="javax.swing.JLabel" binding="followingNum" custom-create="true">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="2fcc6" class="javax.swing.JButton" binding="followersButton" default-binding="true">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <foreground color="-16743746"/>
+                  <text value="Followers:"/>
+                </properties>
+              </component>
+              <component id="f08a0" class="javax.swing.JButton" binding="followingsButton" default-binding="true">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <foreground color="-16743746"/>
+                  <text value="Followings:"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="66fee" layout-manager="GridLayoutManager" row-count="4" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-855809"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="9e707" class="javax.swing.JButton" binding="name1" custom-create="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-16743746"/>
+                  <horizontalTextPosition value="2"/>
+                </properties>
+              </component>
+              <component id="97b33" class="javax.swing.JLabel" binding="tweet1" custom-create="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="6" vsize-policy="7" hsize-policy="7" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="75" height="0"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-6104065"/>
+                </properties>
+              </component>
+              <component id="5ebd8" class="javax.swing.JButton" binding="reTweetButton" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <foreground color="-16091461"/>
+                  <label value="RT"/>
+                  <text value="RT"/>
+                </properties>
+              </component>
+              <component id="8c312" class="javax.swing.JButton" binding="likeButton" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <borderPainted value="true"/>
+                  <foreground color="-10052933"/>
+                </properties>
+              </component>
+              <hspacer id="2b143">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="6bd10" class="javax.swing.JLabel" binding="retnum" custom-create="true">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="9d879" class="javax.swing.JLabel" binding="likesnum" custom-create="true">
+                <constraints>
+                  <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="d1d44" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="     "/>
+                </properties>
+              </component>
+              <hspacer id="13904">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="8" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="e2c4c" class="javax.swing.JLabel" binding="reTweetedfrom2" custom-create="true">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="fda16" class="javax.swing.JLabel" binding="date1" custom-create="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="365ba" class="javax.swing.JLabel" binding="reT1" custom-create="true">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+          <grid id="9febe" layout-manager="GridLayoutManager" row-count="3" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-855809"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="80e47" class="javax.swing.JButton" binding="reTweetButton1" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <foreground color="-16091461"/>
+                  <label value="RT"/>
+                  <text value="RT"/>
+                </properties>
+              </component>
+              <component id="76d3e" class="javax.swing.JButton" binding="likeButton1" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <borderPainted value="true"/>
+                  <foreground color="-10052933"/>
+                </properties>
+              </component>
+              <hspacer id="2956a">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="3311d" class="javax.swing.JLabel" binding="tweet2" custom-create="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="75" height="0"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-6104065"/>
+                </properties>
+              </component>
+              <component id="1d346" class="javax.swing.JButton" binding="name2" custom-create="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-16743746"/>
+                  <horizontalTextPosition value="2"/>
+                </properties>
+              </component>
+              <component id="99933" class="javax.swing.JLabel" binding="retnum1" custom-create="true">
+                <constraints>
+                  <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="c539d" class="javax.swing.JLabel" binding="likesnum1" custom-create="true">
+                <constraints>
+                  <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="5e0ab" class="javax.swing.JLabel" binding="reTweetedfrom3" custom-create="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="c4287" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="    "/>
+                </properties>
+              </component>
+              <hspacer id="36f14">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="8" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="be410" class="javax.swing.JLabel" binding="reT2" custom-create="true">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+          <grid id="c5a8" layout-manager="GridLayoutManager" row-count="3" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-855809"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="5ac13" class="javax.swing.JButton" binding="likeButton2" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <borderPainted value="true"/>
+                  <foreground color="-10052933"/>
+                </properties>
+              </component>
+              <component id="c274d" class="javax.swing.JLabel" binding="retnum2" custom-create="true">
+                <constraints>
+                  <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="48cae" class="javax.swing.JLabel" binding="likesnum2" custom-create="true">
+                <constraints>
+                  <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="cd79d" class="javax.swing.JLabel" binding="reTweetedfrom1" custom-create="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="42ee7" class="javax.swing.JButton" binding="name3" custom-create="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-16743746"/>
+                  <horizontalTextPosition value="2"/>
+                </properties>
+              </component>
+              <hspacer id="43565">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="44110" class="javax.swing.JButton" binding="reTweetButton2" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <foreground color="-16091461"/>
+                  <label value="RT"/>
+                  <text value="RT"/>
+                </properties>
+              </component>
+              <component id="4a58" class="javax.swing.JLabel" binding="tweet3" custom-create="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="75" height="0"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-6104065"/>
+                </properties>
+              </component>
+              <component id="84e25" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="    "/>
+                </properties>
+              </component>
+              <hspacer id="74044">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="8" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="c5bdd" class="javax.swing.JLabel" binding="reT3" custom-create="true">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+          <grid id="f57ed" layout-manager="GridLayoutManager" row-count="3" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="5" column="0" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-855809"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="acf4e" class="javax.swing.JButton" binding="name4" custom-create="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-16743746"/>
+                  <horizontalTextPosition value="2"/>
+                </properties>
+              </component>
+              <component id="992d3" class="javax.swing.JButton" binding="reTweetButton3" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-855809"/>
+                  <foreground color="-16091461"/>
+                  <label value="RT"/>
+                  <text value="RT"/>
+                </properties>
+              </component>
+              <component id="20507" class="javax.swing.JButton" binding="likeButton3" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <borderPainted value="true"/>
+                  <foreground color="-10052933"/>
+                </properties>
+              </component>
+              <component id="3935b" class="javax.swing.JLabel" binding="retnum3" custom-create="true">
+                <constraints>
+                  <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="f1628" class="javax.swing.JLabel" binding="likesnum3" custom-create="true">
+                <constraints>
+                  <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <hspacer id="5da92">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="a2384" class="javax.swing.JLabel" binding="tweet4" custom-create="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="75" height="0"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-6104065"/>
+                </properties>
+              </component>
+              <component id="25375" class="javax.swing.JLabel" binding="reTweetedfrom" custom-create="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="91dc0" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="    "/>
+                </properties>
+              </component>
+              <hspacer id="5ed28">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="8" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="926f6" class="javax.swing.JLabel" binding="reT4" custom-create="true">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+          <component id="119b5" class="javax.swing.JButton" binding="nextButton">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Fira Code Retina"/>
+              <horizontalTextPosition value="0"/>
+              <text value="v"/>
+            </properties>
+          </component>
+          <component id="6eb96" class="javax.swing.JButton" binding="previousButton">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Fira Code Retina" style="1"/>
+              <text value="^"/>
+            </properties>
+          </component>
+          <vspacer id="266b7">
+            <constraints>
+              <grid row="2" column="1" row-span="4" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <grid id="32d54" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-3806977"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
