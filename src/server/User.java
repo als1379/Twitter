@@ -1,4 +1,4 @@
-package com.codebind;
+package server;
 
 import java.util.ArrayList;
 
@@ -24,8 +24,8 @@ public class User {
         this.username = username;
         this.password = password;
         this.email = email;
-        id = Twitter.users.size();
-        Twitter.users.add(this);
+        id = Server.users.size();
+        Server.users.add(this);
     }
 
     public String getPass() {
@@ -69,7 +69,7 @@ public class User {
         this.timeline.add(tweet.id);
         this.tweets.add(tweet.id);
         for (Integer follower : this.followers) {
-            Twitter.users.get(follower).timeline.add(tweet.id);
+            Server.users.get(follower).timeline.add(tweet.id);
             //System.out.println(Twitter.users.get(follower).username);
         }
 
@@ -79,19 +79,19 @@ public class User {
         boolean flag = true;
         Tweet tweet;
         if (t instanceof ReTweet) {
-            tweet = Twitter.tweets.get(((ReTweet) t).pTweet);
+            tweet = Server.tweets.get(((ReTweet) t).pTweet);
         } else {
             tweet = t;
         }
         for (int i = 0; i < tweet.likes.size(); i++) {
-            if (Twitter.users.get(tweet.likes.get(i)).username.equals(this.username)) {
+            if (Server.users.get(tweet.likes.get(i)).username.equals(this.username)) {
                 flag = false;
             }
         }
         if (flag) {
             for (int i = 0; i < tweet.reTweets.size(); i++) {
-                Twitter.tweets.get(tweet.reTweets.get(i)).likesnum++;
-                Twitter.tweets.get(tweet.reTweets.get(i)).likes.add(this.id);
+                Server.tweets.get(tweet.reTweets.get(i)).likesnum++;
+                Server.tweets.get(tweet.reTweets.get(i)).likes.add(this.id);
             }
             for (int i = 0; i < tweet.likes.size(); i++) {
                 if (tweet.likes.get(i) == this.id) {
@@ -113,10 +113,10 @@ public class User {
             }
             //System.out.println("hello");
             for (int i = 0; i < tweet.reTweets.size(); i++) {
-                Twitter.tweets.get(tweet.reTweets.get(i)).likesnum--;
-                for (int j = 0; j < Twitter.tweets.get(tweet.reTweets.get(i)).likes.size(); j++) {
-                    if (Twitter.tweets.get(tweet.reTweets.get(i)).likes.get(j) == this.id) {
-                        Twitter.tweets.get(tweet.reTweets.get(i)).likes.remove(j);
+                Server.tweets.get(tweet.reTweets.get(i)).likesnum--;
+                for (int j = 0; j < Server.tweets.get(tweet.reTweets.get(i)).likes.size(); j++) {
+                    if (Server.tweets.get(tweet.reTweets.get(i)).likes.get(j) == this.id) {
+                        Server.tweets.get(tweet.reTweets.get(i)).likes.remove(j);
                     }
                 }
             }
@@ -128,11 +128,11 @@ public class User {
     public void follow(User user) {
         boolean flag = true;
         for (int i = 0; i < following.size(); i++) {
-            if (Twitter.users.get(following.get(i)).equals(user)) {
+            if (Server.users.get(following.get(i)).equals(user)) {
                 flag = false;
                 following.remove(i);
                 for (int j = 0; j < user.followers.size(); j++) {
-                    if (Twitter.users.get(user.followers.get(j)).equals(this)) {
+                    if (Server.users.get(user.followers.get(j)).equals(this)) {
                         removeTweets(user);
                         user.followers.remove(j);
                         this.followingNum--;
@@ -157,19 +157,19 @@ public class User {
         Tweet tweet;
         boolean flag = true;
         if (t instanceof ReTweet) {
-            tweet = Twitter.tweets.get(((ReTweet) t).pTweet);
+            tweet = Server.tweets.get(((ReTweet) t).pTweet);
         } else {
             tweet = t;
         }
         for (int i = 0; i < tweet.retweeters.size(); i++) {
-            if (Twitter.users.get(tweet.retweeters.get(i)).equals(this)) {
+            if (Server.users.get(tweet.retweeters.get(i)).equals(this)) {
                 flag = false;
             }
         }
         if (flag) {
             tweet.retweetsnum++;
             for (int i = 0; i < tweet.reTweets.size(); i++) {
-                Twitter.tweets.get(i).retweetsnum++;
+                Server.tweets.get(i).retweetsnum++;
             }
             ReTweet rtweet = new ReTweet(this, tweet.user, tweet);
             this.timeline.add(rtweet.id);
@@ -180,23 +180,23 @@ public class User {
         } else {
             tweet.retweetsnum--;
             for (int i = 0; i < tweet.reTweets.size(); i++) {
-                if (((ReTweet) (Twitter.tweets.get((tweet.reTweets.get(i))))).retweeter.equals(this.id)) {
+                if (((ReTweet) (Server.tweets.get((tweet.reTweets.get(i))))).retweeter.equals(this.id)) {
                     for (int j = 0; j < this.timeline.size(); j++) {
-                        if (this.timeline.get(j) == Twitter.tweets.get(tweet.reTweets.get(i)).id) {
+                        if (this.timeline.get(j) == Server.tweets.get(tweet.reTweets.get(i)).id) {
                             this.timeline.remove(j - 1 + 1);
                             break;
                         }
                     }
 
                     for (int j = 0; j < this.retweets.size(); j++) {
-                        if (this.retweets.get(j) == Twitter.tweets.get(tweet.reTweets.get(i)).id) {
+                        if (this.retweets.get(j) == Server.tweets.get(tweet.reTweets.get(i)).id) {
                             this.retweets.remove(j - 1 + 1);
                             break;
                         }
                     }
 
                     for (int j = 0; j < this.tweets.size(); j++) {
-                        if (this.tweets.get(j) == Twitter.tweets.get(tweet.reTweets.get(i)).id) {
+                        if (this.tweets.get(j) == Server.tweets.get(tweet.reTweets.get(i)).id) {
                             this.tweets.remove(j - 1 + 1);
                             break;
                         }
@@ -206,7 +206,7 @@ public class User {
             }
             for (int i = 0; i < tweet.retweeters.size(); i++) {
                 //System.out.println(Twitter.users.get(tweet.retweeters.get(i)).username);
-                if (Twitter.users.get(tweet.retweeters.get(i)).equals(this)) {
+                if (Server.users.get(tweet.retweeters.get(i)).equals(this)) {
                     //System.out.println(tweet.retweeters.size());
                     tweet.retweeters.remove(i);
                     //System.out.println(tweet.retweeters.size());
@@ -224,15 +224,15 @@ public class User {
             }
         } else {
             while (j < user.tweets.size()) {
-                if (Twitter.tweets.get(user.tweets.get(j)).id < Twitter.tweets.get(this.timeline.get(i)).id) {
-                    this.timeline.add(i, Twitter.tweets.get((user.tweets.get(j))).id);
+                if (Server.tweets.get(user.tweets.get(j)).id < Server.tweets.get(this.timeline.get(i)).id) {
+                    this.timeline.add(i, Server.tweets.get((user.tweets.get(j))).id);
                     j++;
                 } else {
                     i++;
                 }
                 if (i == this.timeline.size() && j < user.tweets.size()) {
                     while (j < user.tweets.size()) {
-                        this.timeline.add(Twitter.tweets.get(user.tweets.get(j)).id);
+                        this.timeline.add(Server.tweets.get(user.tweets.get(j)).id);
                         j++;
                     }
                     break;

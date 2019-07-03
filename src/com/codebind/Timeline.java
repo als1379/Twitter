@@ -1,5 +1,8 @@
 package com.codebind;
 
+import server.ReTweet;
+import server.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

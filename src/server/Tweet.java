@@ -1,4 +1,4 @@
-package com.codebind;
+package server;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -20,8 +20,8 @@ public class Tweet {
     Tweet(User user, String text) {
         this.user = user;
         this.text = text;
-        id = Twitter.tweets.size();
-        Twitter.tweets.add(this);
+        id = Server.tweets.size();
+        Server.tweets.add(this);
         if (!(this instanceof ReTweet)) {
             calendar.setTime(date);   // assigns calendar to given date
             calendar.get(Calendar.HOUR_OF_DAY); // gets hour in 24h format
