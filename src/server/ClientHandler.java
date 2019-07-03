@@ -66,7 +66,7 @@ class ClientHandler extends Thread{
                 if (u.password.equals(password)) {
                     dataOutputStream.writeBoolean(true);
                     dataOutputStream.flush();
-                    user = new User(username, password);        ////////////// mitoni name va email ro bardari?
+                    user = new User(username, password);       ////////////// mitoni name va email ro bardari?
                 } else {
                     dataOutputStream.writeBoolean(false);
                     dataOutputStream.flush();
