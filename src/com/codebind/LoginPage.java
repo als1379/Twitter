@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class LoginPage {
     private JButton loginButton;
@@ -34,20 +35,20 @@ public class LoginPage {
                 } else {
                     boolean flag = true;
                     User loginer;
-                    for (User user : Twitter.users) {
-                        if (user.username.equals(textField1.getText())) {
-                            flag = false;
-                            loginer = user;
-                            if (checkPass(loginer, passwordField1.getPassword())) {
-                                Timeline start = new Timeline(loginer, 0);
-                                start.Start();
-                            } else {
-                                JOptionPane.showMessageDialog(null, "Wrong Password");
-                            }
+                    String username = textField1.getText();
+                    String password = String.valueOf(passwordField1.getPassword());     ///////is this ok?
+                    Client.print("login");
+
+                    try {
+                        if (Client.dataInputStream.readBoolean() == true) {
+                            Timeline start = new Timeline(loginer, 0);      ////////////////////////////////
+                            start.Start();
+                        } else {
+                            JOptionPane.showMessageDialog(null, Client.dataInputStream.readUTF());
                         }
-                    }
-                    if (flag) {
-                        JOptionPane.showMessageDialog(null, "wrong Username");
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
                 }
             }

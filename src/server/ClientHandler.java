@@ -36,12 +36,66 @@ class ClientHandler extends Thread{
                     case "gettweets":
                         getTweets();
                         break;
+                    case "follow":
+                        follow();
+                        break;
+                    case "unfollow":
+                        unfollow();
+                        break;
+                    case "like":
+                        like();
+                        break;
+                    case "unlike":
+                        unlike();
+                        break;
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
+
+    private void unlike() throws IOException {
+        int tweetId = dataInputStream.readInt();
+        for (Tweet t : Server.tweets) {
+            if (t.id == tweetId) {
+                ////////////////////////////////////////////////////
+            }
+        }
+    }
+
+    private void like() throws IOException {
+        int tweetId = dataInputStream.readInt();
+        for (Tweet t : Server.tweets) {
+            if (t.id == tweetId) {
+                ////////////////////////////////////////////////////
+            }
+        }
+    }
+
+    private void unfollow() throws IOException { /////////////////////////////////////
+        String username = dataInputStream.readUTF();
+        for (User u : Server.users) {
+            if (u.username.equals(user.username)) {
+                continue;
+            }
+            if (u.username.equals(username)) {
+
+            }
+        }
+    }
+
+    private void follow() throws IOException { ///////////////////////////////////////
+        String username = dataInputStream.readUTF();
+        for (User u : Server.users) {
+            if (u.username.equals(user.username)) {
+                continue;
+            }
+            if (u.username.equals(username)) {
+
+            }
+        }
     }
 
     /**
