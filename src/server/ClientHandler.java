@@ -44,15 +44,42 @@ class ClientHandler extends Thread{
 
     }
 
+    /**
+     * method to add new tweet
+     */
+    private void tweet() {
+
+    }
+
+    /**
+     * method to take all tweets from server for timeline
+     */
+    private void getTweets() {
+
+    }
+
     private void signup() throws IOException {
+
+        String name = dataInputStream.readUTF();
         String username = dataInputStream.readUTF();
         String password = dataInputStream.readUTF();
+        String email = dataInputStream.readUTF();
+
         boolean userExist = false;
 
         for (User u : Server.users) {
             if (user.username.equals(username)) {
                 userExist = true;
             }
+        }
+        if (userExist) {
+            dataOutputStream.writeBoolean(false);
+            dataOutputStream.flush();
+        } else {
+            dataOutputStream.writeBoolean(true);
+            dataOutputStream.flush();
+            user = new User(name, username, password, email);
+            Server.users.add(user);
         }
     }
 
@@ -66,7 +93,7 @@ class ClientHandler extends Thread{
                 if (u.password.equals(password)) {
                     dataOutputStream.writeBoolean(true);
                     dataOutputStream.flush();
-                    user = new User(username, password);       ////////////// mitoni name va email ro bardari?
+                    user = u;
                 } else {
                     dataOutputStream.writeBoolean(false);
                     dataOutputStream.flush();
